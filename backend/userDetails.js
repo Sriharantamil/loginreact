@@ -2,10 +2,13 @@ const mongoose=require("mongoose");
 const UserDetailsSchema=new mongoose.Schema(
     {
         username:String,
-        password:String
+        email:{type:String, unique:true},
+        password:String,
+        access:String
     },
     {
         collection:"UserInfo",
     }
 );
-mongoose.model("UserInfo",UserDetailsSchema);
+const UserData = mongoose.model("UserInfo",UserDetailsSchema);
+module.exports = UserData;

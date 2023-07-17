@@ -6,6 +6,10 @@ import "./App.css";
 
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Create from "./components/Create";
+import SelectFile from "./components/SelectFile";
+import ProjectCreation from "./components/projectCreaction";
+import PackageData from "./components/PackageData";
 
 const App = () => {
   
@@ -20,7 +24,7 @@ const App = () => {
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to={"/login"} className="nav-link">
-                Login
+                LOGIN
               </Link>
             </li>
           </div>
@@ -31,6 +35,10 @@ const App = () => {
         <Routes>
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
+          <Route exact path="/create" element={<Create />} />
+          <Route exact path="/selectfile" element={<SelectFile />} />
+          <Route exact path="/projectcreation" element={<ProjectCreation/>} />
+          <Route exact path="/Packagedata" element={<PackageData/>} />
 
         </Routes>
       </div>
